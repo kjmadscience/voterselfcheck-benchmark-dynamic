@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: voterselfcheck-config
+data:
+  WORKLOAD_PARAMS: "--duration=300 --servers=mydb-voltdb-cluster-0.mydb-voltdb-cluster-internal.default.svc.cluster.local --contestants=6 --maxvotes=20 --ratelimit=3000"
+  SQLCMD_PARAMS: "--servers=mydb-voltdb-cluster-0.mydb-voltdb-cluster-internal.default.svc.cluster.local"
