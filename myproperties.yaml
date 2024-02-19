@@ -1,0 +1,20 @@
+cluster:
+  clusterSpec:
+    replicas: 3
+    additionalStartArgs:
+      - '--ignore=thp'
+    persistentVolume:
+      size: "8Gi"
+  config:
+    deployment:
+      cluster:
+        kfactor: 1
+        sitesperhost: 4
+      commandlog:
+        enabled: 'true'
+        synchronous: 'false'
+        logsize: 3072
+        frequency:
+           time: 5000
+      snapshot:
+        enabled: 'false'
